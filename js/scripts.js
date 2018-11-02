@@ -1,6 +1,6 @@
 function Pizza() {
-  this.pizzaToppings = 0
-  this.pizzaSize = pizzaSize,
+  this.pizzaToppings = 0,
+  this.pizzaSize = 0,
   this.pizzaPrice = 0 // this.small, this.md, this. lrg??
 }
 
@@ -12,12 +12,15 @@ Pizza.prototype.findToppings = function() {
 
    }
 
-// Pizza.prototype.findPrice = function() {
-//   use pizzaToppings $$,if toppings quantity = 1, price $, if topping qty = 2-4, price $$, topping qty 5+, price $$$
-//   if size sm add $, md add $$, lrg add $$$
-//
-//   if sm add toppings... ad this.sm, etc
-// }
+   Pizza.prototype.findSize = function() {
+     this.pizzaSize += parseInt(size);
+     console.log(this.pizzaSize);
+    }
+
+Pizza.prototype.findPrice = function() {
+  this.pizzaPrice += (this.pizzaToppings + this.pizzaSize)
+  console.log(this.pizzaPrice)
+}
 
 
 //UI
@@ -34,17 +37,18 @@ $(document).ready(function(){
     console.log(size);
       $("input:checkbox[name=pizza-topping]:checked").each(function() {
       toppingQty.push($(this).val());
-      console.log(toppingQty);
+
     })
   //   $("input:checkbox[name=pizza-size]:checked").each(function() {
   //   size.push($(this).val());
   //   console.log(size);
   // })
    var pizzaOrder = new Pizza();
-
+     pizzaOrder.findToppings();
+     pizzaOrder.findSize();
      pizzaOrder.findPrice();
 
-     $("#total").text(pizaOrder.pizzaPrice);
+    // $("#total").text(pizaOrder.pizzaPrice);
     //
 
 
