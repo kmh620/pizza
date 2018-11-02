@@ -13,42 +13,58 @@
      <div class="jumbotron">
        <h2>Order Pizza</h2>
      </div>
-     <form id="pizza-order">
-       <div class="form-group">
-         <p>Select toppings, $1 each:</p>
-         <input class="topping" type="checkbox" name="pizza-topping" value="Cheese">Cheese<br>
-         <input class="topping" type="checkbox" name="pizza-topping" value="Olives">Olives<br>
-         <input class="topping" type="checkbox" name="pizza-topping" value="Bell-Pepper">Bell Pepper<br>
-         <input class="topping" type="checkbox" name="pizza-topping" value="Spinach">Spinach<br>
-         <input class="topping" type="checkbox" name="pizza-topping" value="Onion">Onion<br>
-         <input class="topping" type="checkbox" name="pizza-topping" value="Mushrooms">Mushrooms<br>
-         <input class="topping" type="checkbox" name="pizza-topping" value="Roasted-Garlic">Roasted Garlic<br>
-         <input class="topping" type="checkbox" name="pizza-topping" value="Artichoke-Hearts">Artichoke Hearts<br>
-         <input class="topping" type="checkbox" name="pizza-topping" value="Tomato">Tomato<br>
-       </div>
-       <select class="form-control" id="size-select">
-         <p>Select Pizza Size:</p>
-         <option id="Sml" value="1">Small</option>
-         <option id="Med" value="2">Medium</option>
-         <option id="Lrg" value="3">Large</option>
-       </select>
-      <button type="submit">Order Pizza!</button>
-     </form>
+     <div class="row">
+       <div class="col-md-6">
+         <hr>
+         <h3>Pizza Order:</h3>
+      
+        <form id="pizza-order">
+          <div id="pizzaName" class="form-group">
+            <label for="pizzaName">Pizza Name:</label>
+            <input required class="pizzaName form-control" type="text">
+          </div>
+         <div class="form-group">
+           <p>Select toppings, $1 each:</p>
+           <input class="topping" type="checkbox" name="pizza-topping" value="Cheese">Cheese<br>
+           <input class="topping" type="checkbox" name="pizza-topping" value="Olives">Olives<br>
+           <input class="topping" type="checkbox" name="pizza-topping" value="Bell-Pepper">Bell Pepper<br>
+           <input class="topping" type="checkbox" name="pizza-topping" value="Spinach">Spinach<br>
+           <input class="topping" type="checkbox" name="pizza-topping" value="Onion">Onion<br>
+           <input class="topping" type="checkbox" name="pizza-topping" value="Mushrooms">Mushrooms<br>
+           <input class="topping" type="checkbox" name="pizza-topping" value="Roasted-Garlic">Roasted Garlic<br>
+           <input class="topping" type="checkbox" name="pizza-topping" value="Artichoke-Hearts">Artichoke Hearts<br>
+           <input class="topping" type="checkbox" name="pizza-topping" value="Tomato">Tomato<br>
+         </div>
+         <p>Select Size:</p>
+         <select class="form-control" id="size-select">
+           <option id="Sml" value="1">Small</option>
+           <option id="Med" value="2">Medium</option>
+           <option id="Lrg" value="3">Large</option>
+         </select>
+        <button type="submit">Order Pizza!</button>
+       </form>
+       <hr>
+       <h3>Pizzas:</h3>
+       <ul id="pizzas">
+       </ul>
+   </div>
 
-     <div class="container" id="total">
+     <div class="col-md-6">
+       <div id="show-detail">
        <span id="selected-toppings">
          <p><b>Your Toppings:</b></p>
        </span>
-
        <span id="selected-size">
          <p><b>Size</b></p>
        </span>
-
        <span id="price">
          <p><b>Total</b></p>
        </span>
+       <div id="buttons">
+       </div>
+     </div>
       </div>
-
+</div>
     </div>
   </body>
 </html>
