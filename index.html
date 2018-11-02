@@ -17,14 +17,14 @@
        <div class="col-md-6">
          <hr>
          <h3>Pizza Order:</h3>
-      
-        <form id="pizza-order">
-          <div id="pizzaName" class="form-group">
-            <label for="pizzaName">Pizza Name:</label>
-            <input required class="pizzaName form-control" type="text">
+
+        <form id="new-pizza-order">
+          <div class="form-group">
+            <label for="new-pizza-name">Pizza Name:</label>
+            <input class="form-control" type="text" id="new-pizza-name">
           </div>
          <div class="form-group">
-           <p>Select toppings, $1 each:</p>
+           <p>Select toppings, Add $1 each:</p>
            <input class="topping" type="checkbox" name="pizza-topping" value="Cheese">Cheese<br>
            <input class="topping" type="checkbox" name="pizza-topping" value="Olives">Olives<br>
            <input class="topping" type="checkbox" name="pizza-topping" value="Bell-Pepper">Bell Pepper<br>
@@ -37,34 +37,30 @@
          </div>
          <p>Select Size:</p>
          <select class="form-control" id="size-select">
-           <option id="Sml" value="1">Small</option>
-           <option id="Med" value="2">Medium</option>
-           <option id="Lrg" value="3">Large</option>
+           <option id="Sml" value="1">Small, $1 </option>
+           <option id="Med" value="2">Medium, $2</option>
+           <option id="Lrg" value="3">Large, $3</option>
          </select>
-        <button type="submit">Order Pizza!</button>
-       </form>
-       <hr>
-       <h3>Pizzas:</h3>
-       <ul id="pizzas">
-       </ul>
-   </div>
+         <button type="submit" class="btn-primary">Complete order</button>
+        </form>
 
-     <div class="col-md-6">
-       <div id="show-detail">
-       <span id="selected-toppings">
-         <p><b>Your Toppings:</b></p>
-       </span>
-       <span id="selected-size">
-         <p><b>Size</b></p>
-       </span>
-       <span id="price">
-         <p><b>Total</b></p>
-       </span>
-       <div id="buttons">
+         <hr>
+         <h3>Pizzas:</h3>
+         <ul id="pizzas">
+         </ul>
        </div>
-     </div>
+
+       <div class="col-md-6">
+         <div id="show-detail">
+           <p>Pizza:<span class="pizza-name"</span></p>
+           <p>Size:<span class="pizza-size"</span></p>
+           <p>Toppings:<span class="pizza-toppings"</span></p>
+           <p>Price:<span class="pizza-price"</span></p>
+         <div id="buttons">
+         </div>
+         </div>
+        </div>
       </div>
-</div>
     </div>
   </body>
 </html>
