@@ -9,6 +9,29 @@
     <title></title>
   </head>
   <body>
+    <div class="container">
+     <div class="jumbotron">
+       <h2>Order Pizza</h2>
+     </div>
+     <form id="topping-select-1">
+       <div class="form-group">
+         <p>Select toppings, $1 each:</p>
+         <input type="checkbox" name="pizza-topping" value="bike">Cheese<br>
+         <input type="checkbox" name="pizza-topping" value="car">Olives<br>
+         <input type="checkbox" name="pizza-topping" value="carpool">Bell Pepper<br>
+         <input type="checkbox" name="pizza-topping" value="walk">Spinach<br>
+         <input type="checkbox" name="pizza-topping" value="bus">Onion<br>
+         <input type="checkbox" name="pizza-topping" value="train">Mushrooms<br>
+         <input type="checkbox" name="pizza-topping" value="streetcar">Roasted Garlic<br>
+         <input type="checkbox" name="pizza-topping" value="taxi">Artichoke Hearts<br>
+         <input type="checkbox" name="pizza-topping" value="rideshare">Tomato<br>
+       </div>
+      <button type="submit">Order Pizza!</button>
+     </form>
+     <span id="selected-toppings">
+       <p><b>Your Toppings:</b></p>
+     </span>
+   </div>
 
   </body>
 </html>

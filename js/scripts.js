@@ -5,6 +5,10 @@ function Pizza(pizzaToppings, pizzaSize) {
 }
 
 Pizza.prototype.toppingQuantity = function() {
+  //toppings.forEach(function(count) {
+  //add $ to this.pizzaToppings
+
+  })
   //use submit-topping, and forEach loop to add $,
   // push qty as pizzaToppings $$
 }
@@ -22,3 +26,16 @@ Pizza.prototype.findPrice = function() {
 
 //UI
 //submit topping button- from checkboxes= submit-topping
+// var toppings =[checkboxes];
+//
+$(document).ready(function(){
+  $("form#topping-select-1").submit(function(event){
+    event.preventDefault();
+    $("#selected-toppings").show();
+    $("input:checkbox[name=pizza-topping]:checked").each(function(){
+      var selectedToppings = $(this).val();
+      $('#selected-toppings').append(selectedToppings + "<br>");
+    });
+    //$('#transportation_survey').hide();
+  });
+});
