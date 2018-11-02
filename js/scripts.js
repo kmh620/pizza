@@ -118,14 +118,13 @@ $(document).ready(function() {
       toppingList.push(toppingCheck);
       toppingQty.push(toppingCheck);
       })
-    //$(".pizza-toppings").append(inputPizzaToppings + "<br>");
+
     $("input#new-pizza-name").val("");
 
    var newPizza = new Pizza(inputPizzaName, inputPizzaToppings, inputPizzaSize);
      newPizza.findToppingsCost();
      newPizza.findSizeCost();
      newPizza.findPrice();
-     //newPizza.findToppings();
      $("#size-select option:selected").text();
      $("input:checkbox[name=pizza-topping]:checked").text();
      newOrder.addPizza(newPizza);

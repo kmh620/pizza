@@ -23,12 +23,13 @@
 * _Open the html file in your Web Browser_
 
 
+
 ### Technologies Used
 
 _GitHub, HTML, CSS, Bootstrap, Javascript, JQuery_
 
 #### Known Bugs
-* Cost of first pizza's toppings is added to price of second pica, etc.
+* Cost of first pizza's size is added to price of second pizza, etc.
 
 
 #### license
