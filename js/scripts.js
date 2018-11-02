@@ -39,20 +39,18 @@ $(document).ready(function(){
       toppingQty.push($(this).val());
 
     })
-  //   $("input:checkbox[name=pizza-size]:checked").each(function() {
-  //   size.push($(this).val());
-  //   console.log(size);
-  // })
+
    var pizzaOrder = new Pizza();
      pizzaOrder.findToppings();
      pizzaOrder.findSize();
      pizzaOrder.findPrice();
+     $("#size-select option:selected").text();
+     console.log($("#size-select option:selected").text());
 
-    // $("#total").text(pizaOrder.pizzaPrice);
-    //
-
-
-     //$('#selected-toppings').append(selectedToppings + "<br>");
+    // $("#price").text(pizzaOrder.pizzaPrice);
+     $('#selected-toppings').append(toppingQty + "<br>");
+    $('#selected-size').append($("#size-select option:selected").text() + "<br>");
+     $('#price').append("$" + pizzaOrder.pizzaPrice + "<br>");
     })
   })
 //
